@@ -33,5 +33,17 @@ public class Main {
         for(Droid droid: droids) {
             droid.speak();
         }
+
+        AstromechDroid R2D5 = new AstromechDroid("R2D5", r2Model, tools);
+
+        BattleDroid OOM7 = new BattleDroid("OOM-7", battleModel, rifles);
+
+        List<Defender> defenders = new ArrayList<>();
+        defenders.add(R2D5);
+        defenders.add(OOM7);
+
+        for(Defender defender: defenders) {
+            defender.defend();
+        }
     }
 }

@@ -1,7 +1,7 @@
 import java.util.List;
 import java.util.Optional;
 
-public class BattleDroid extends Droid{
+public class BattleDroid extends Droid implements Defender{
 
     public BattleDroid(String serialNumber, Model model, List<Tool> tools) {super(serialNumber, model, tools);}
 
@@ -9,6 +9,8 @@ public class BattleDroid extends Droid{
     protected void speak() {
         System.out.println("Roger, roger.");
     }
+
+    public void defend() { shootEnemy();}
 
     public void shootEnemy() {
         Optional<Tool> combatToolOptional = tools.stream().filter(tool -> tool.getToolType().equals(Tool.ToolType.RIFLE) && tool.getDurability() > 0).findFirst();

@@ -1,7 +1,7 @@
 import java.util.List;
 import java.util.Optional;
 
-public class AstromechDroid extends Droid {
+public class AstromechDroid extends Droid implements Defender{
 
     public AstromechDroid(String serialNumber, Model model, List<Tool> tools) {super (serialNumber, model, tools);}
 
