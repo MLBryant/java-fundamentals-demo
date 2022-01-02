@@ -3,7 +3,7 @@ public class Tool {
     private final ToolType toolType;
     private int durability;
     public enum ToolType {
-        STARSHIP_REPAIR
+        STARSHIP_REPAIR, RIFLE
     }
 
     public Tool(ToolType toolType) {

@@ -11,12 +11,27 @@ public class Main {
         tools.add(new Tool(Tool.ToolType.STARSHIP_REPAIR));
         tools.add(new Tool(Tool.ToolType.STARSHIP_REPAIR));
         tools.add(new Tool(Tool.ToolType.STARSHIP_REPAIR));
-        Droid arToo = new Droid("R2D2", r2Model, tools);
+        AstromechDroid arToo = new AstromechDroid("R2D2", r2Model, tools);
 
-
-        arToo.speak();
         for (int i = 0; i < 11; i++) {
             arToo.repairStarship();
+        }
+
+        Model c3Model = ModelFactory.getModel("Seeker");
+        ProtocolDroid threePio = new ProtocolDroid("C3PO", c3Model, new ArrayList<>());
+
+        Model battleModel = ModelFactory.getModel("Battle");
+        List<Tool> rifles = new ArrayList<>();
+        rifles.add(new Tool(Tool.ToolType.RIFLE));
+        BattleDroid OOM9 = new BattleDroid("OOM-9", battleModel, rifles);
+
+        List<Droid> droids = new ArrayList<>();
+        droids.add(arToo);
+        droids.add(threePio);
+        droids.add(OOM9);
+
+        for(Droid droid: droids) {
+            droid.speak();
         }
     }
 }
