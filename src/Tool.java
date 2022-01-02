@@ -1,6 +1,6 @@
 public class Tool {
 
-    private ToolType toolType;
+    private final ToolType toolType;
     private int durability;
     public enum ToolType {
         STARSHIP_REPAIR
@@ -14,14 +14,12 @@ public class Tool {
     public ToolType getToolType() {
         return toolType;
     }
-    public void setToolType (ToolType toolType) {
-        this.toolType = toolType;
-    }
 
     public int getDurability() {
         return durability;
     }
-    public void setDurability(int durability) {
-        this.durability = durability;
+
+    public void useTool() {
+        this.durability = durability - 1;
     }
 }

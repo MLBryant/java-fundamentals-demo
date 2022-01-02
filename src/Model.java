@@ -1,7 +1,7 @@
 public class Model {
 
-    private String modelType;
-    private String purpose;
+    private final String modelType;
+    private final String purpose;
 
     public Model(String modelType, String purpose) {
         this.modelType = modelType;
@@ -11,15 +11,9 @@ public class Model {
     public String getModelType() {
         return modelType;
     }
-    public void setModelType(String modelType) {
-        this.modelType = modelType;
-    }
 
     public String getPurpose() {
         return purpose;
-    }
-    public void setPurpose(String purpose) {
-        this.purpose = purpose;
     }
 
     public String toString() {
